@@ -1,0 +1,47 @@
+/* Assuming your container div has a class called "lan-box" */
+.lan-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(230, 203, 248),rgb(255, 255, 255));
+  background-size: cover;
+  background-position: center;
+  /* Add any other container-specific styles here */
+}
+
+/* Style the h1 heading */
+.lan-box h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  /* Add any other h1-specific styles here */
+  animation: fadeInUp 1s ease; /* Example animation */
+}
+
+/* Style the h2 heading */
+.lan-box h2 {
+  font-size: 18px;
+  color: #555;
+  animation: fadeInUp 3s ease 0.25s; /* Example animation with delay */
+}
+
+/* Example animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon img {
+  width: 24px; /* Adjust the width as needed */
+  height: 24px; /* Adjust the height as needed */
+  margin-right: 10px; /* Add spacing between the icon and logo */
+}
