@@ -1,16 +1,12 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Poppins, sans-serif;
-}
-
 .outer-most h1 {
   margin-bottom: 20px;
   text-align: center;
   margin-bottom: 40px;
   animation: fadeIn 1.5s ease-in-out;
-}
+  font-size: 2.5rem;/* Larger heading*/
+   color: #333; /*Darker heading color */
+   font-family: 'sans-serif';
+} 
 
 .serv-box {
   display: grid;
@@ -20,68 +16,79 @@
 }
 
 .service {
-  background-color: #f9f9f9; /* Light grey background */
-  border: 1px solid #ddd; /* Light grey border */
-  padding: 20px;
-  border-radius: 25px; /* Adjust as needed for spacing inside boxes */
+  background-color: #ffffff; /* White background for a cleaner look */
+  border: 1px solid #ddd; 
+ 
+  padding: 25px;
+  border-radius: 15px; /* Rounded corners */
   text-align: center; /* Center the content horizontally */
-  font-weight: 400; /* Make the title bold */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 400; /* Regular font-weight */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   animation: slideInUp 1s ease-in-out; /* Slide-in effect */
   transition: transform 0.3s, box-shadow 0.3s;
+  width: 500px;
+  height:auto;
+}
+
+.service h2 {
+  font-size: 1.8rem; /* Larger title */
+  color: #0074d9; /* Matching the button color */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 1rem; /* Slightly larger text */
+  color: #666; /* Soft grey text color */
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.service-image {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s; /* Smooth transform transition */
+}
+
+.service:hover .service-image {
+  transform: scale(1.1); /* Slight zoom on hover */
 }
 
 .service:hover {
-  background-color: #e0e0e0; /* Slightly darker background on hover */
+  /* background-color: #f0f8ff; Light blue background on hover */
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.service:hover .service-icon {
-  transform: rotate(360deg);
-  transition: transform 0.5s;
-}
-
 .my-button {
   display: inline-block;
-  margin-top: 15vh;
-  padding: 10px 20px;
+  margin-top: 10vh;
+  padding: 10px 25px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   border: 2px solid #0074d9; /* Border color (adjust as needed) */
-  background-color: #0074d9; /* Background color (adjust as needed) */
-  color: #ffffff; /* Text color (usually white for contrast) */
-  border-radius: 5px; /* Rounded corners */
+  background-color:#9766c4; /* Background color (adjust as needed) */
+  color: #fff; /* Text color (usually white for contrast) */
+  border-radius: 5rem; /* More rounded corners */
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transitions */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border:none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0.2rem .5 rem rbga(0,0,0,0.3);
+  height: 3.5rem;
+
 }
 
 .my-button:hover {
   background-color: #005ea6; /* Darker background color on hover */
   color: #ffffff; /* Maintain white text color */
   transform: translateY(-5px);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (max-width: 1024px) {
@@ -112,3 +119,22 @@
     font-size: 14px;
   }
 }
+
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Move the image 10px up */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.image-bounce {
+  width: 200px;
+  height: 200px;
+  animation: upAndDown 2s ease-in-out infinite; /* Adjust timing as needed */
+}
+
